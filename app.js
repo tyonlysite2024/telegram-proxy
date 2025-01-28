@@ -2,13 +2,15 @@
 require('dotenv').config();
 const express = require("express");
 const axios = require("axios");
+const cors = require("cors");
+
 
 
 // Create express app
 var app = express();
 
 app.use(express.json()); // For parsing JSON payloads
-
+app.use(cors());
 // Get the functions in the db.js file to use
 
 // Create a route for root - /
